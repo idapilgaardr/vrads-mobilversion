@@ -1,0 +1,1077 @@
+/* Scroll to top */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fonts */
+@font-face {
+    font-family: crimson-reg;
+    src: url('fonts/CrimsonText-Regular.ttf');
+}
+
+@font-face {
+    font-family: crimson-bold;
+    src: url('fonts/CrimsonText-Bold.ttf');
+}
+
+@font-face {
+    font-family: crimson-semibold;
+    src: url('fonts/CrimsonText-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: crimson-ita;
+    src: url('fonts/CrimsonText-Italic.ttf');
+}
+
+@font-face {
+    font-family: qua-reg;
+    src: url('fonts/QuattrocentoSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: qua-bold;
+    src: url('fonts/QuattrocentoSans-Bold.ttf');
+}
+
+@font-face {
+    font-family: qua-ita;
+    src: url('fonts/QuattrocentoSans-Italic.ttf');
+}
+
+h1 {
+    font-size: 2.3rem;
+    font-weight: 400;
+    font-family: crimson-reg;
+    text-align: center;
+    margin-top: 96px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: crimson-reg;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: crimson-reg;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: crimson-reg;
+}
+
+p {
+    font-size: 20px;
+    line-height: 135%;
+    font-family: qua-reg;
+}
+
+.hvid_tekst {
+    color: white;
+}
+
+.blaa_tekst {
+    color: #172E4D;
+}
+
+.qua-bold {
+    font-family: qua-bold;
+}
+
+.qua-ita {
+    font-family: qua-ita;
+}
+
+.crimson-semibold {
+    font-family: crimson-semibold;
+}
+
+.crimson-ita {
+    font-family: crimson-ita;
+}
+
+.aabning_text p {
+    color: white;
+    font-family: crimson-reg;
+}
+
+.centreret_text {
+    text-align: center;
+    font-family: qua-ita;
+    color: #172E4D;
+}
+
+
+/* Body */
+body {
+    background-color: #EDE8DA;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*----------------------------------- FORSIDE ----------------------------------- */
+/* Navigationsbaren */
+
+nav {
+    background-color: #E4DECD;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    margin-bottom: 96px;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 75px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #172E4D;
+    font-family: qua-reg;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 995;
+    background-color: #E4DECD;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+}
+
+.logo {
+    height: 75%;
+    width: auto;
+}
+
+/* Video */
+
+.video {
+    width: 100%;
+    height: auto;
+}
+
+
+.videotext_wrapper {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 70px;
+    bottom: 0px;
+    left: 0;
+}
+
+.videotext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pil_ned {
+    display: flex;
+    justify-content: center;
+    margin-top: -70px;
+    z-index: 10;
+    /* Tilføj denne linje */
+    position: relative;
+    /* Sørg for at z-index anvendes */
+}
+
+.videotext1 {
+    color: white;
+    font-family: crimson-reg;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.videotext2 {
+    color: white;
+    font-family: crimson-reg;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* knapper */
+
+.knap {
+    width: 150px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: qua-reg;
+    background-color: #62758A;
+    color: white;
+    --mask: radial-gradient(12px at 12px 12px, #0000 98%, #000) -12px -12px;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    margin: 64px auto 0 auto;
+    /* Top margin og auto for at centrere vandret */
+}
+
+.knap a {
+    color: white;
+    padding: 12px;
+}
+
+/*
+Disse knapper er lavet ved hjælp af denne kilde
+https://css-generators.com/custom-corners/
+*/
+
+.knap:hover {
+    background-color: #172E4D;
+}
+
+
+/* Velkomst sektion + Natur sektion på forsiden */
+
+.velkommen_wrapper,
+.natur_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 96px;
+    gap: 96px;
+    animation: fadeIn 0.5s;
+    animation-timeline: view();
+    animation-range-start: 1px;
+    animation-range-end: 900px;
+}
+
+.linje {
+    width: 100%;
+    height: auto;
+    padding-top: 24px;
+    padding-bottom: 56px;
+}
+
+.kalender_wrapper .linje {
+    width: 50%;
+}
+
+/* Åbningstider */
+
+.aabning_wrapper {
+    position: relative;
+    text-align: center;
+    color: white;
+    background-image: url(img/aabningstider.svg);
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s;
+    animation-timeline: view();
+    animation-range-start: 1px;
+    animation-range-end: 500px;
+}
+
+/* Kalender sektion på forsiden */
+
+.kalender_wrapper {
+    position: relative;
+    text-align: center;
+    color: white;
+    background-image: url(img/kalenderen.svg);
+    background-size: cover;
+    padding: 96px;
+    animation: fadeIn 0.5s;
+    animation-timeline: view();
+    animation-range-start: 1px;
+    animation-range-end: 900px;
+}
+
+
+.kalender_wrapper_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 96px;
+}
+
+.knap_hvid {
+    width: 150px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: qua-reg;
+    background-color: #EDE8DA;
+    color: #172E4D;
+    --mask: radial-gradient(12px at 12px 12px, #0000 98%, #000) -12px -12px;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    margin: 64px auto 0 auto;
+    /* Top margin og auto for at centrere vandret */
+}
+
+.knap_hvid a {
+    color: #172E4D;
+    padding: 12px;
+}
+
+.knap_hvid a:hover {
+    color: #EDE8DA;
+    cursor: pointer;
+}
+
+.knap_hvid:hover {
+    background-color: #172E4D;
+    color: #EDE8DA;
+}
+
+
+/* Gæstebog på forsiden */
+
+.guestbook {
+    margin-top: 96px;
+    margin-bottom: 96px;
+    animation: fadeIn 0.5s;
+    animation-timeline: view();
+    animation-range-start: 1px;
+    animation-range-end: 900px;
+}
+
+.guestbook div {
+    position: relative;
+    text-align: center;
+}
+
+.guestbook img {
+    width: 42%;
+    height: auto;
+    padding-top: 24px;
+    padding-bottom: 8px;
+}
+
+#gemmeleg {
+    width: 100%;
+    height: 50px;
+    background-color: #EDE8DA;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+}
+
+/*----------------------------------- MENUKORT - ID'ER ----------------------------------- */
+#frokost,
+#aften,
+#kaffekage,
+#drikkevarer {
+    background-color: #172E4D;
+}
+
+/*----------------------------------- MENUKORT - FROKOSTMENU ----------------------------------- */
+
+/* Billedkarrusel */
+
+.wrapperwrapper {
+    display: flex;
+    justify-content: right;
+    padding-top: 40px;
+
+    background-color: #EDE8DA;
+}
+
+.menu_wrapper {
+    max-width: 1300px;
+    position: relative;
+}
+
+.menu_wrapper .menu_carousel {
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 96px;
+}
+
+.menu_carousel img {
+    height: 375px;
+    object-fit: cover;
+    padding-right: 30px;
+    width: calc(100% / 4);
+}
+
+.menu_carousel:first-child {
+    margin-left: 0px;
+}
+
+/* Menuknapper */
+
+
+.menu_knapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 64px;
+    margin-left: 96px;
+    margin-right: 96px;
+}
+
+.menukort_layout div {
+    position: relative;
+    text-align: center;
+    margin-left: 136px;
+    margin-right: 136px;
+}
+
+
+.menu_ret p {
+    font-family: crimson-reg;
+}
+
+
+.menulinje_stor {
+    width: 42%;
+    height: auto;
+    padding-top: 24px;
+    padding-bottom: 64px;
+}
+
+.menulinje_lille {
+    width: 10%;
+    height: auto;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.menu_bold {
+    font-family: crimson-bold;
+}
+
+/*----------------------------------- MENUKORT - AFTENMENU ----------------------------------- */
+
+.menu_aften {
+    font-family: crimson-bold;
+    font-size: 2rem;
+    text-align: center;
+    color: #172E4D;
+}
+
+/* ----------------------------------- BEGIVENHEDER ----------------------------------- */
+
+
+.centreret_overskrift {
+    margin-top: 96px;
+}
+
+.centreret_overskrift img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 42%;
+    padding-top: 24px;
+}
+
+.begivenhed_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 96px;
+    gap: 96px;
+    animation: fadeIn 0.5s;
+    animation-timeline: view();
+    animation-range-start: 1px;
+    animation-range-end: 900px;
+}
+
+.begivenhed_linje {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 86%;
+}
+
+/* ----------------------------------- HISTORIEN BAG ----------------------------------- */
+
+.historien_img {
+    display: flex;
+    justify-content: center;
+    animation: fadeIn 0.5s;
+    animation-timeline: view();
+    animation-range-start: 1px;
+    animation-range-end: 600px;
+}
+
+.historien_img img {
+    width: 86%;
+
+}
+
+.tidslinje {
+    top: 12%;
+    position: sticky;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    z-index: 995;
+    margin-top: 40px;
+}
+
+.circle {
+    position: sticky;
+    top: 12%;
+    /* Startposition: midt på skærmen */
+    margin-left: 27%;
+    margin-right: 27%;
+    width: 20px;
+    height: 20px;
+    background-color: #003366;
+    border-radius: 50%;
+    transform: translateY(-50%);
+     z-index: 995;
+    /* Sørger for at cirklen ligger oven på andre elementer */
+}
+
+.tidslinje_tal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: sticky;
+    top: 72px;
+    /* Sørg for at fastgøre elementet til toppen af dets container */
+    background-color: #EDE8DA;
+    /* Gør det muligt at se elementet, hvis det overlapper indholdet */
+    z-index: 900;
+    /* Sikrer, at elementet forbliver øverst på skærmen */
+    padding-bottom: 60px;
+    padding-top: 15px;
+}
+
+.spalter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+    margin-left: 96px;
+    margin-right: 96px;
+    margin-top: 40px;
+    margin-bottom: 24px;
+    gap: 64px;
+}
+
+/* ----------------------------------- SELSKABER ----------------------------------- */
+.selskab_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 64px;
+    margin-top: 64px;
+    animation: fadeIn 0.5s linear;
+    animation-timeline: view();
+    animation-range-start: 1px;
+    animation-range-end: 500px;
+}
+
+.selskab_wrapper2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 64px;
+    margin-top: 32px;
+    animation: fadeIn 0.5s;
+    animation-timeline: view();
+    animation-range-start: 1px;
+    animation-range-end: 500px;
+}
+
+.selskab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 450px;
+    /* Sørger for, at hver .selskab container ikke er for bred */
+}
+
+.selskab img {
+    max-width: 100%;
+    /* Sørger for, at billedet ikke overstiger containerens bredde */
+    display: block;
+}
+
+.selskab_tekst {
+    background-image: url('img/selskaber_baggrund.svg');
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 375px;
+    padding-left: 32px;
+    padding-right: 32px;
+    box-sizing: border-box;
+    /* Sørger for, at padding inkluderes i bredden */
+}
+
+.knap_placering {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 32px;
+}
+
+.knap_selskab {
+    width: 150px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #EDE8DA;
+    color: #172E4D;
+    --mask: radial-gradient(12px at 12px 12px, #0000 98%, #000) -12px -12px;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+
+.knap_selskab a {
+    color: #172E4D;
+}
+
+.knap_selskab:hover {
+    background-color: #172E4D;
+    color: white;
+}
+
+.knap_selskab a:hover {
+    color: white;
+}
+
+
+/* ----------------------------------- 404 side ----------------------------------- */
+.fejlside_wrapper p {
+    text-align: center;
+}
+
+.fejlside_wrapper {
+    margin-top: 15%;
+}
+
+
+/* ----------------------------------- Footer ----------------------------------- */
+
+.footer_wrapper2 {
+    padding: 6% 6% 6% 6%;
+    background-color: #E4DECD;
+    display: flex;
+    /* Bruger flexbox */
+    justify-content: space-between;
+    /* Placerer elementerne med lige mellemrum */
+    flex-direction: row;
+    margin-top: 96px;
+    padding-bottom: 64px;
+}
+
+.footer_wrapper2 p {
+    font-family: crimson-reg;
+}
+
+.tekst_layout {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+.footer_wrapper2 div p a {
+    color: #172E4D
+}
+
+
+/* ----------------------------------- ANIMATIONER ----------------------------------- */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        scale: 0.95;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+
+/* ----------------------------------- MEDIA QUERIES ----------------------------------- */
+/*  NAVIGATIONSBAREN */
+@media(max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
+@media(max-width: 400px) {
+    .sidebar {
+        width: 75%;
+        z-index: 1005;
+    }
+}
+
+/*  Animation */
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+
+/*------------------------------------------------------------------------------------*/
+
+/* GENERELT */
+
+@media(max-width: 400px) {
+    p {
+        font-size: 16px;
+    }
+
+    .knap {
+        width: 128px;
+        height: 56px;
+        --mask: radial-gradient(8px at 8px 8px, #0000 98%, #000) -8px -8px;
+    }
+
+    .knap a {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 20px;    
+    }
+}
+
+/*------------------------------------------------------------------------------------*/
+
+/*  FORSIDE */
+
+@media only screen and (max-width: 400px) {
+    .video {
+      width: 100vw;
+      height: 88vh;
+      object-fit: cover;
+    }
+    .pil_ned {
+        margin-top: -45px;
+    }
+
+    .velkommen_wrapper {
+        flex-direction: column;
+        padding: 40px;
+        gap: 64px;
+    }
+   
+    .videotext1 {
+        font-size: 2.2rem;
+    }
+
+    .natur_wrapper {
+        flex-direction: column-reverse;
+        padding: 40px;
+        gap: 64px;
+    }
+
+    .aabning_wrapper {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .aabning_wrapper p {
+        padding: 0 32px 0 32px;
+    }
+
+    .forside_img {
+        width: 100%;
+        height: auto;
+    }
+
+    .linje {
+        padding-bottom: 24px;
+        z-index: 10;
+    }
+}
+
+/* Kalender-sektion */
+@media only screen and (max-width: 400px) {
+    .kalender_wrapper_content {
+        flex-direction: column;
+    }
+    .kalender_wrapper {
+        padding:40px;
+        margin-top: 0px;
+    }
+    .kalender_wrapper h1 {
+        font-size: 24px;
+        padding-top: 40px;
+    }
+
+    .kalender_wrapper .linje {
+        width: 100%;
+    }
+}
+
+/*  Gæstebog */ 
+@media only screen and (max-width: 400px) {
+    .guestbook {
+        margin-top: 40px;
+    }
+   
+    #gemmeleg {
+        height: 10px;
+    }
+
+    .guestbook img {
+        padding-bottom: 40px;
+        width: 80%;
+    }
+
+    .guestbook a {
+        padding: 24px;
+        max-height: 48px;
+    }
+
+    .fbo-embed {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+    }
+}
+
+/*------------------------------------------------------------------------------------*/
+
+/*  MENUKORT */
+
+@media(max-width: 400px) {
+    /* Billedkarrusel */
+
+    .menu_carousel img {
+        height: 300px;
+        width: auto;
+    }
+
+    .menu_carousel:first-child {
+        margin-left: 0px;
+    }
+
+    /* Menuknapper */
+    .menu_knapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 64px;
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    .menukort_layout div {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .menulinje_stor {
+        width: 100%;
+    }
+
+    .menu_aften {
+        font-size: 24px;
+    }
+}
+
+/*------------------------------------------------------------------------------------*/
+
+/*  BEGIVENHEDER */
+
+@media(max-width: 400px) {
+    .centreret_overskrift {
+        margin-top: 40px;
+    }
+
+    .centreret_overskrift img {
+        width: 86%;
+    }
+
+    .begivenhed_img {
+        max-width: 100%;
+    }
+
+    .begivenhed_wrapper:nth-of-type(odd) {
+        flex-direction: column;
+        padding: 40px;
+        gap: 0;
+    }
+
+    .begivenhed_wrapper:nth-of-type(even) {
+        flex-direction: column-reverse;
+        padding: 40px;
+        gap: 0;
+    }
+}
+
+/*------------------------------------------------------------------------------------*/
+
+/*  HISTORIEN BAG */
+
+@media only screen and (max-width: 400px) {
+    .centreret_overskrift h1 {
+        font-size: 24px;
+        padding-bottom: 16px;
+        margin-top: 96px;
+    }
+
+    .tidslinje_tal h2 {
+        font-size: 16px;
+    }
+
+    .tidslinje {
+        top: 10%;
+        width: 55%;
+        margin-top: 24px;
+    }
+
+    .tidslinje_tal {
+        padding-bottom: 24px;
+        top: 74px;
+    }
+    
+    .spalter {
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-top: 40px;
+        margin-bottom: 24px;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .circle {
+        width: 15px;
+        height: 15px;
+        top: 10%;
+    }
+}
+
+/*------------------------------------------------------------------------------------*/
+
+/*  SELSKABER */
+
+@media(max-width: 400px) {
+    .selskab_wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .selskab_wrapper2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin-top: 40;
+    }
+    
+    .selskab {
+        max-width: 320px;
+        /* Sørger for, at hver .selskab container ikke er for bred */
+    }
+    
+    .knap_selskab {
+        width: 128px;
+        height: 56px;
+        --mask: radial-gradient(8px at 8px 8px, #0000 98%, #000) -8px -8px;
+    }
+}
+
+/*------------------------------------------------------------------------------------*/
+
+/*  404 SIDE */
+
+@media only screen and (max-width: 400px) {
+    .fejlside_wrapper {
+        margin-top: 40%;
+    }
+}
+
+/*------------------------------------------------------------------------------------*/
+
+/*  FOOTER */
+
+@media(max-width: 400px) {
+    
+    .footer_wrapper2 {
+        flex-direction: column;
+        margin-top: 64px;
+        gap: 40px;
+        margin-bottom: 64px;
+    }
+
+    .footer_wrapper2 a {
+        text-decoration: underline; 
+    }
+}

@@ -1,0 +1,60 @@
+/* Fonts */
+@font-face {
+    font-family: crimson-reg;
+    src: url('fonts/CrimsonText-Regular.ttf');
+}
+
+@font-face {
+    font-family: crimson-ita;
+    src: url('fonts/CrimsonText-Italic.ttf');
+}
+
+@font-face {
+    font-family: crimson-semibold;
+    src: url('fonts/CrimsonText-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: qua-reg;
+    src: url('fonts/QuattrocentoSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: qua-bold;
+    src: url('fonts/QuattrocentoSans-Bold.ttf');
+}
+
+@font-face {
+    font-family: crimson-ita;
+    src: url('fonts/CrimsonText-Italic.ttf');
+}
+
+
+
+.change_language {
+    font-family: crimson-bold;
+    font-size: 12px;
+}
+
+.change_language:hover {
+    text-decoration: none;
+}
+
+.qua-bold {
+    font-family: qua-bold;
+}
+
+.tekst_layout {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+/********************************************************************************************************************************/
+/************************************************* Styleregler for footer  ******************************************************/
+/********************************************************************************************************************************/
+
+
+
+
